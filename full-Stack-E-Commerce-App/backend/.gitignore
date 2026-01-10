@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+.env
+full-Stack-E-Commerce-App/backend/.env
+full-Stack-E-Commerce-App/frontend/.env
