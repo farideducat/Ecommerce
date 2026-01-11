@@ -7,8 +7,6 @@ const router = require('./routes')
 const webhooks = require('./controller/order/webhook')
 
 const allowedOrigins = [
-  'https://ecommerce-zeta-beryl-50.vercel.app',
-  // Add more if needed, like localhost for development:
   'http://localhost:3000'
 ];
 
