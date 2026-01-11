@@ -1,37 +1,27 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-
-const schema = new mongoose.Schema({
+const orderSchema = new mongoose.Schema({
     ProductDetails: {
         type: Array,
         default: []
     },
-    email: {
-        type: String,
-        default: ""
-    },
-    userId: {
-        type: String,
-        default: ""
-    },
+    email: String,
+    userId: String,
     paymentDetails: {
         paymentId: String,
-        payment_method_type: Array,
-        payment_status: String,
+        payment_method_type: [],
+        payment_status: String, 
     },
-    shipping_option: {
-        type: Array,
-        default: []
-    },
-    total_amount: {
-        type: Number,
-        default: 0
-    },
+    // IMPORTANT: This must match your "Final Object to Save"
+    shipping_options: [
+        {
+            shipping_amount: Number
+        }
+    ],
+    total_amount: Number
 }, {
     timestamps: true
 });
 
-
-const orderModel = mongoose.model("order", schema);
-
+const orderModel = mongoose.model('order', orderSchema);
 module.exports = orderModel;

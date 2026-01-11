@@ -34,7 +34,7 @@ console.log("CART ITEMS:", request.body.cartItems)
                    currency : 'omr',
                    product_data : {
                     name : items.productId.productName,
-                    images : items.productId. productImage[Array],
+                    images : [items.productId.productImage[0]],
                     metadata : {
                       productId : items.productId._id
                     }
