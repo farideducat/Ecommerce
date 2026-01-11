@@ -2,7 +2,7 @@ const stripe = require('../../config/stripe');
 const orderModel = require('../../models/orderProductModel');
 const addToCartModel = require('../../models/cartProduct')
 
-const endpointSecret = process.env.STRIPE_ENDPOINT_WEBHOOKS_SECRET_KEY;
+const endpointSecret = process.env.STRIPE_ENDPOINT;
 
 
 async function getLineItems(lineItems) {
