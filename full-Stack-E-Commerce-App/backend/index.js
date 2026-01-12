@@ -6,6 +6,11 @@ const connectDB = require('./config/db')
 const router = require('./routes')
 const webhooks = require('./controller/order/webhook')
 
+const allowedOrigins = [
+  'https://ecommerce-31na.vercel.app',
+  'http://localhost:3000'
+];
+
 const app = express()
 app.use(cors({ 
   origin : process.env.FRONTEND_URL,
